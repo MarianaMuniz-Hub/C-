@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+
+struct aluno {
+    string nome;
+    int matricula;
+    string curso;
+    float media_final;
+};
+
+void cadastro_aluno (){
+    aluno a1;
+    cout << "Nome: ";
+    cin.ignore();
+    getline(cin,a1.nome);
+    cout << "Numero da matricula: "; 
+    cin >> a1.matricula;
+    cout << "Curso: "; 
+    cin >> a1.curso;
+    cout << "Media final: "; 
+    cin >> a1.media_final;
+};
+
+int main() {
+    int opcao;
+    const int tamanho = 100;
+    aluno lista[tamanho];
+    setlocale(LC_ALL,"Portuguese");
+    
+    cout << "\n===== CALCULADORA COM MENU ====="<< endl;
+    cout << "1. Cadastrar aluno"<< endl;
+    cout << "2. Listar todos os alunos cadastrados"<< endl;
+    cout << "3. Buscar aluno por matrícula"<< endl;
+    cout << "4. Sair"<< endl;
+    cout << "Escolha uma opção:" << endl;
+    cin >> opcao;
+    
+    if (opcao == 1){
+       cadastro_aluno (); 
+    }
+    
+    if (opcao == 2){
+      for (int i = 1; i < tamanho ; i++){
+         cout << ""<< endl; 
+      } 
+    }
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    return 0;
+}
